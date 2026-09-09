@@ -25,10 +25,10 @@
   h1,h2,h3,h4,.display{font-family:'Fraunces', serif;}
   a{text-decoration:none; color:inherit;}
 
-  nav{ position:fixed; top:0; left:0; right:0; z-index:900; display:flex; align-items:center; justify-content:space-between; padding:18px 48px; background:rgba(46,26,13,0.95); backdrop-filter:blur(10px); }
-  .logo{ display:flex; align-items:center; gap:12px; font-family:'Fraunces',serif; font-size:16px; font-weight:600; color:#fff; letter-spacing:.3px; line-height:1.2;}
+  nav{ position:fixed; top:0; left:0; right:0; z-index:900; display:flex; align-items:center; justify-content:space-between; padding:16px 48px; background:rgba(46,26,13,0.95); backdrop-filter:blur(10px); }
+  .logo{ display:flex; align-items:center; gap:14px; font-family:'Fraunces',serif; font-size:24px; font-weight:700; color:#fff; letter-spacing:.5px; line-height:1.15;}
   .logo span{ color:var(--gold-soft); }
-  .logo .full{display:block;} .logo .sub{display:block; font-size:9px; letter-spacing:1.8px; color:var(--gold-soft); font-family:'Inter',sans-serif; font-weight:500; margin-top:2px;}
+  .logo .full{display:block; font-size:24px; font-weight:700;} .logo .sub{display:block; font-size:10.5px; letter-spacing:2px; color:var(--gold-soft); font-family:'Inter',sans-serif; font-weight:600; margin-top:3px; text-transform:uppercase;}
   .navlinks{ display:flex; gap:30px; }
   .navlinks a{ color:#eee3d3; font-size:13.5px; font-weight:500; letter-spacing:.2px; }
   .navlinks a:hover{ color:var(--gold-soft); }
@@ -42,7 +42,18 @@
   .btn-whatsapp{ background:#25D366; color:#fff; font-size:15px; padding:14px 28px; justify-content:center; width:100%; border-radius:6px;}
   .btn-whatsapp:hover{ background:#20bd5a; transform:translateY(-2px); box-shadow:0 8px 20px rgba(37,211,102,0.3); }
 
-  @media(max-width:960px){ .navlinks{display:none;} nav{padding:14px 20px;} }
+  @media(max-width:960px){ 
+    .navlinks{display:none;} 
+    nav{padding:14px 20px;} 
+    .logo .full{ font-size:20px; }
+    .logo img{ height:40px !important; }
+  }
+  @media(max-width:480px){
+    .logo{ font-size:16px; gap:10px; }
+    .logo img{ height:34px !important; }
+    .logo .full{ font-size:16px; }
+    .logo .sub{ font-size:8.5px; letter-spacing:1px; }
+  }
 
   .page-hero{
     padding: 160px 48px 60px;
@@ -116,7 +127,7 @@
 
 <nav>
   <a href="index.html" class="logo">
-    <img src="images/logo.png" alt="Infranova Logo" style="height: 38px; width: auto; object-fit: contain;">
+    <img src="images/logo.png" alt="Infranova Logo" style="height: 48px; width: auto; object-fit: contain;">
     <div>
       <span class="full">INFRANOVA <span>GLOBAL CONCEPT</span></span>
       <span class="sub">LTD · PARENT HOLDING</span>

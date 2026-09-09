@@ -455,6 +455,263 @@
     border-top: 1px solid #eee3d4;
     padding-top: 14px;
   }
+
+  /* DIVISION PILLS */
+  .division-pills {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 24px;
+    flex-wrap: wrap;
+  }
+  .pill-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 13.5px;
+    font-weight: 600;
+    color: var(--brown-deep);
+    background: #fff;
+    border: 1px solid rgba(169,137,93,0.3);
+    text-decoration: none;
+    transition: all 0.25s ease;
+    box-shadow: 0 4px 12px rgba(46,26,13,0.04);
+  }
+  .pill-btn:hover, .pill-btn.active {
+    background: var(--gold);
+    color: #fff;
+    border-color: var(--gold);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(169,137,93,0.25);
+  }
+
+  /* CIVIL INFRASTRUCTURE SECTION */
+  .civil-infra-container {
+    max-width: 1280px;
+    margin: 60px auto 100px;
+    padding: 0 32px;
+  }
+  .civil-banner {
+    background: linear-gradient(135deg, var(--brown-deep) 0%, #3e2210 60%, var(--olive) 100%);
+    border-radius: 12px;
+    padding: 48px 44px;
+    color: #fff;
+    margin-bottom: 50px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 16px 40px rgba(46,26,13,0.12);
+  }
+  .civil-banner-badge {
+    display: inline-block;
+    background: rgba(228,207,164,0.2);
+    color: var(--gold-soft);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    padding: 6px 14px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    border: 1px solid rgba(228,207,164,0.3);
+  }
+  .civil-banner h2 {
+    font-size: clamp(26px, 3.5vw, 38px);
+    font-weight: 600;
+    line-height: 1.25;
+    margin-bottom: 14px;
+  }
+  .civil-banner p {
+    font-size: 16px;
+    color: #eee3d3;
+    max-width: 780px;
+    line-height: 1.7;
+    margin-bottom: 26px;
+  }
+  .civil-stats-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding-top: 24px;
+    border-top: 1px solid rgba(255,255,255,0.15);
+  }
+  @media(max-width: 800px) {
+    .civil-stats-row { grid-template-columns: repeat(2, 1fr); }
+  }
+  .civil-stat-item h4 {
+    font-size: 26px;
+    font-family: 'Fraunces', serif;
+    color: var(--gold-soft);
+    font-weight: 700;
+  }
+  .civil-stat-item span {
+    font-size: 12.5px;
+    color: #d6cbba;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .civil-division-card {
+    background: #fff;
+    border-radius: 12px;
+    border: 1px solid rgba(169,137,93,0.25);
+    box-shadow: 0 10px 30px rgba(46,26,13,0.06);
+    margin-bottom: 50px;
+    padding: 40px;
+  }
+  @media(max-width: 600px) {
+    .civil-division-card { padding: 24px 20px; }
+  }
+  .civil-div-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    gap: 16px;
+    border-bottom: 2px solid #f2ece3;
+    padding-bottom: 20px;
+  }
+  .civil-div-header h3 {
+    font-size: 26px;
+    color: var(--brown-deep);
+    font-weight: 600;
+  }
+  .civil-div-header p {
+    font-size: 14.5px;
+    color: #6b5e50;
+    max-width: 680px;
+    margin-top: 6px;
+    line-height: 1.6;
+  }
+
+  .civil-photos-grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    margin-bottom: 28px;
+  }
+  .civil-photos-grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin-bottom: 28px;
+  }
+  @media(max-width: 960px) {
+    .civil-photos-grid-3 { grid-template-columns: 1fr 1fr; }
+    .civil-photos-grid-4 { grid-template-columns: 1fr 1fr; }
+  }
+  @media(max-width: 580px) {
+    .civil-photos-grid-3 { grid-template-columns: 1fr; }
+    .civil-photos-grid-4 { grid-template-columns: 1fr; }
+  }
+
+  .civil-photo-card {
+    border-radius: 8px;
+    overflow: hidden;
+    background: #FBF8F3;
+    border: 1px solid rgba(169,137,93,0.2);
+    box-shadow: 0 6px 18px rgba(46,26,13,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .civil-photo-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 30px rgba(46,26,13,0.12);
+  }
+  .civil-photo-wrap {
+    height: 220px;
+    position: relative;
+    overflow: hidden;
+  }
+  .civil-photo-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+  .civil-photo-card:hover .civil-photo-wrap img {
+    transform: scale(1.06);
+  }
+  .civil-photo-tag {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: rgba(36,18,7,0.85);
+    color: var(--gold-soft);
+    font-size: 10.5px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    padding: 4px 10px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    backdrop-filter: blur(4px);
+  }
+  .civil-photo-info {
+    padding: 18px 20px;
+  }
+  .civil-photo-info h4 {
+    font-family: 'Fraunces', serif;
+    font-size: 17px;
+    color: var(--brown-deep);
+    margin-bottom: 6px;
+  }
+  .civil-photo-info p {
+    font-size: 13px;
+    color: #5b5347;
+    line-height: 1.55;
+  }
+
+  .civil-feature-box {
+    background: #f7f3ec;
+    border-radius: 8px;
+    padding: 24px 28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  .civil-feature-list {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    list-style: none;
+  }
+  .civil-feature-list li {
+    font-size: 13.5px;
+    font-weight: 600;
+    color: var(--brown-deep);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .civil-feature-list li svg {
+    color: var(--olive);
+    flex-shrink: 0;
+  }
+
+  .civil-cta-card {
+    background: linear-gradient(120deg, var(--brown-deep) 0%, #4a2a14 50%, var(--gold) 100%);
+    border-radius: 12px;
+    padding: 50px 44px;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+  .civil-cta-card h3 {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  .civil-cta-card p {
+    font-size: 15px;
+    color: #eee3d3;
+    max-width: 600px;
+  }
 </style>
 </head>
 <body>
@@ -463,29 +720,36 @@
 
 <!-- NAVIGATION -->
 <nav id="nav">
-  <a class="logo" href="index.html" style="display: flex; align-items: center; gap: 12px; text-decoration: none; color: #fff;">
-    <img src="images/logo.png" alt="Infranova Logo" style="height: 38px; width: auto; object-fit: contain;">
+  <a class="logo" href="index.html" style="display: flex; align-items: center; gap: 14px; text-decoration: none; color: #fff;">
+    <img src="images/logo.png" alt="Infranova Logo" style="height: 48px; width: auto; object-fit: contain;">
     <div>
-      <span class="full" style="font-family:'Fraunces',serif; font-size:16px; font-weight:600; color:#fff; letter-spacing:.3px; line-height:1.2; display: block;">INFRANOVA <span style="color:var(--gold-soft);">GLOBAL CONCEPT</span></span>
-      <span class="sub" style="display:block; font-size:9px; letter-spacing:1.8px; color:var(--gold-soft); font-family:'Inter',sans-serif; font-weight:500; margin-top:2px;">LTD · PARENT HOLDING</span>
+      <span class="full" style="font-family:'Fraunces',serif; font-size:24px; font-weight:700; color:#fff; letter-spacing:.5px; line-height:1.15; display: block;">INFRANOVA <span style="color:var(--gold-soft);">GLOBAL CONCEPT</span></span>
+      <span class="sub" style="display:block; font-size:10.5px; letter-spacing:2px; color:var(--gold-soft); font-family:'Inter',sans-serif; font-weight:600; margin-top:3px;">LTD · PARENT HOLDING</span>
     </div>
   </a>
   <div class="navlinks">
     <a href="index.html">Infranova Global (Home)</a>
     <a href="soya.html">Pure Soya Oil</a>
     <a href="distributor.html">Become a Distributor</a>
-    <a href="properties.html" style="color: var(--gold-soft); font-weight:700;">Infranova Properties</a>
+    <a href="properties.html" style="color: var(--gold-soft); font-weight:700;">Infranova Properties &amp; Civil</a>
+    <a href="#civil-infrastructure">Road &amp; Drainage Works</a>
     <a href="index.html#contact">Contact Us</a>
   </div>
   <div class="navcta">
-    <a class="btn btn-gold" href="index.html#contact">Talk to an Advisor</a>
+    <a class="btn btn-gold" href="#quote-cta">Request Quote</a>
   </div>
 </nav>
 
 <!-- PAGE HEADER -->
 <header class="page-header">
-  <h1>Premium Properties</h1>
-  <p>Discover luxury villas, modern apartments, and smart-city investment options across prime locations in West Africa.</p>
+  <h1>Properties &amp; Civil Infrastructure</h1>
+  <p>Discover premier residential estates, inter-state road construction projects, and engineered stormwater drainage systems delivered by Infranova Properties across Nigeria.</p>
+  <div class="division-pills">
+    <a href="#properties-container" class="pill-btn active">🏡 Real Estate Catalog</a>
+    <a href="#road-construction" class="pill-btn">🛣️ Road Construction &amp; Paving</a>
+    <a href="#drainage-systems" class="pill-btn">🌊 Drainage &amp; Flood Defense</a>
+    <a href="#quote-cta" class="pill-btn">📋 Request Engineering Quote</a>
+  </div>
 </header>
 
 <!-- FILTERING CONTROLS -->
@@ -577,29 +841,232 @@
   <!-- JavaScript will inject cards here -->
 </main>
 
+<!-- CIVIL INFRASTRUCTURE DIVISION (ROAD & DRAINAGE) -->
+<section id="civil-infrastructure" class="civil-infra-container">
+  
+  <!-- INTRO BANNER -->
+  <div class="civil-banner">
+    <span class="civil-banner-badge">Civil Engineering &amp; Infrastructure Division</span>
+    <h2>Enduring Road Corridors &amp; Municipal Drainage Systems</h2>
+    <p>In addition to luxury gated residential estates, Infranova Properties commands a robust civil engineering wing specializing in highway development, high-friction asphalt road paving, and reinforced concrete stormwater networks that safeguard urban communities and investments from flooding.</p>
+    <div class="civil-stats-row">
+      <div class="civil-stat-item">
+        <h4>100%</h4>
+        <span>COREN / NSE Standard Compliance</span>
+      </div>
+      <div class="civil-stat-item">
+        <h4>Heavy</h4>
+        <span>Earthmoving &amp; Paving Fleet</span>
+      </div>
+      <div class="civil-stat-item">
+        <h4>Grade 35</h4>
+        <span>Reinforced Concrete Spec</span>
+      </div>
+      <div class="civil-stat-item">
+        <h4>All-Weather</h4>
+        <span>Erosion &amp; Flood Defense</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- DIVISION 1: ROAD CONSTRUCTION -->
+  <div id="road-construction" class="civil-division-card">
+    <div class="civil-div-header">
+      <div>
+        <span style="font-size:12px; font-weight:700; color:var(--brown); text-transform:uppercase; letter-spacing:1px; display:block; margin-bottom:6px;">Division 01 · Civil Works</span>
+        <h3>🛣️ Road Construction, Grading &amp; Asphalt Paving</h3>
+        <p>From initial topographical surveys and bush clearing to subgrade soil stabilization, stone-base compaction, and hot-mix bituminous surfacing, we construct high-durability access roads, industrial highways, and estate arterial corridors.</p>
+      </div>
+      <a href="#quote-cta" class="btn btn-gold" style="font-size:13px; padding:10px 20px;">Request Road Tender Quote</a>
+    </div>
+
+    <div class="civil-photos-grid-3">
+      <!-- Road Photo 1 -->
+      <div class="civil-photo-card">
+        <div class="civil-photo-wrap">
+          <img src="images/road-construction-1.jpg" alt="Infranova Road Earthworks and Sub-Base Compaction">
+          <span class="civil-photo-tag">Earthworks &amp; Sub-Base</span>
+        </div>
+        <div class="civil-photo-info">
+          <h4>Heavy Earthworks &amp; Grading</h4>
+          <p>Precision mechanical grading, cut-and-fill operations, and high-tonnage vibratory compaction creating a rock-solid foundation for subsequent road layers.</p>
+        </div>
+      </div>
+
+      <!-- Road Photo 2 -->
+      <div class="civil-photo-card">
+        <div class="civil-photo-wrap">
+          <img src="images/road-construction-2.jpg" alt="Infranova Asphalt Laying and Pneumatic Compaction">
+          <span class="civil-photo-tag">Bituminous Paving</span>
+        </div>
+        <div class="civil-photo-info">
+          <h4>Hot-Mix Asphalt Laying</h4>
+          <p>High-temperature bituminous prime coating and mechanized asphalt finishing rolled to exact density to withstand heavy commercial axle loads.</p>
+        </div>
+      </div>
+
+      <!-- Road Photo 3 -->
+      <div class="civil-photo-card">
+        <div class="civil-photo-wrap">
+          <img src="images/road-construction-3.jpg" alt="Infranova Finished Road Alignment and Kerbing">
+          <span class="civil-photo-tag">Corridor Completion</span>
+        </div>
+        <div class="civil-photo-info">
+          <h4>Finished Arterial Alignment</h4>
+          <p>Completed dual carriageway featuring precision-aligned precast road kerbs, stormwater discharge conduits, and seamless structural transition.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="civil-feature-box">
+      <ul class="civil-feature-list">
+        <li>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          Subgrade Compaction &amp; Soil CBR Testing
+        </li>
+        <li>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          Crushed Rock Base &amp; Binder Course
+        </li>
+        <li>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          Asphalt Wearing Course (50mm–70mm)
+        </li>
+        <li>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          Cast-in-Situ Road Kerbs &amp; Walkways
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- DIVISION 2: DRAINAGE CONSTRUCTION -->
+  <div id="drainage-systems" class="civil-division-card">
+    <div class="civil-div-header">
+      <div>
+        <span style="font-size:12px; font-weight:700; color:var(--olive); text-transform:uppercase; letter-spacing:1px; display:block; margin-bottom:6px;">Division 02 · Hydraulic &amp; Stormwater</span>
+        <h3>🌊 Reinforced Drainage, Culverts &amp; Flood Mitigation</h3>
+        <p>Sustainable stormwater infrastructure engineered to protect roadways, residential developments, and commercial compounds from severe tropical runoff, hydraulic scour, and long-term water erosion.</p>
+      </div>
+      <a href="#quote-cta" class="btn btn-olive" style="font-size:13px; padding:10px 20px;">Request Drainage Quote</a>
+    </div>
+
+    <div class="civil-photos-grid-4">
+      <!-- Drainage Photo 1 -->
+      <div class="civil-photo-card">
+        <div class="civil-photo-wrap">
+          <img src="images/drainage-construction-1.jpg" alt="Reinforced Concrete Box Drain Construction">
+          <span class="civil-photo-tag" style="background:rgba(46,60,25,0.9);">Reinforced Rebar</span>
+        </div>
+        <div class="civil-photo-info">
+          <h4>Structural Rebar &amp; Casting</h4>
+          <p>Heavy ribbed steel rebar frameworks tied and cast with high-strength monolithic concrete to withstand extreme hydrostatic pressure.</p>
+        </div>
+      </div>
+
+      <!-- Drainage Photo 2 -->
+      <div class="civil-photo-card">
+        <div class="civil-photo-wrap">
+          <img src="images/drainage-construction-2.jpg" alt="Deep Stormwater Collector Trench Excavation">
+          <span class="civil-photo-tag" style="background:rgba(46,60,25,0.9);">Deep Trenching</span>
+        </div>
+        <div class="civil-photo-info">
+          <h4>Deep Storm Trenches</h4>
+          <p>High-capacity arterial collector trenching excavated to calculated hydraulic gradients ensuring rapid flood runoff discharge.</p>
+        </div>
+      </div>
+
+      <!-- Drainage Photo 3 -->
+      <div class="civil-photo-card">
+        <div class="civil-photo-wrap">
+          <img src="images/drainage-construction-3.jpg" alt="Drainage Formwork and Channel Inverts">
+          <span class="civil-photo-tag" style="background:rgba(46,60,25,0.9);">Channel Inverts</span>
+        </div>
+        <div class="civil-photo-info">
+          <h4>Smooth Channel Inverts</h4>
+          <p>Smooth cast concrete inverts engineered to prevent silt sedimentation, debris stagnation, and seasonal overflow.</p>
+        </div>
+      </div>
+
+      <!-- Drainage Photo 4 -->
+      <div class="civil-photo-card">
+        <div class="civil-photo-wrap">
+          <img src="images/drainage-construction-4.jpg" alt="Finished Drainage System with Heavy Cover Slabs">
+          <span class="civil-photo-tag" style="background:rgba(46,60,25,0.9);">Completed Network</span>
+        </div>
+        <div class="civil-photo-info">
+          <h4>Heavy-Duty Cover Slabs</h4>
+          <p>Reinforced precast concrete slab covers designed for vehicle crossovers, pedestrian safety, and estate boundary integration.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="civil-feature-box">
+      <ul class="civil-feature-list">
+        <li>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          Single &amp; Twin Cell Box Culverts
+        </li>
+        <li>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          Reinforced Cast-in-Situ U-Drains
+        </li>
+        <li>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          Hydraulic Flood Gradient Optimization
+        </li>
+        <li>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          Vehicle-Rated Precast Cover Slabs
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- CALL TO ACTION / TENDER QUOTE -->
+  <div id="quote-cta" class="civil-cta-card">
+    <div>
+      <span style="font-size:12px; font-weight:700; color:var(--gold-soft); text-transform:uppercase; letter-spacing:1.5px; display:block; margin-bottom:8px;">Consultation &amp; Procurement Desk</span>
+      <h3>Commission Road &amp; Drainage Infrastructure</h3>
+      <p>Partner with Infranova Properties for municipal road tenders, private residential estate infrastructure, stormwater mitigation, or civil earthmoving across Nigeria.</p>
+    </div>
+    <div style="display:flex; gap:12px; flex-wrap:wrap;">
+      <a href="https://wa.me/2348181412668?text=Hello%20Infranova%20Engineering%2C%20I%20would%20like%20to%20request%20an%20infrastructure%20consultation%20%2F%20quote%20for%20Road%20and%20Drainage%20works." target="_blank" class="btn btn-gold">WhatsApp Engineering Desk</a>
+      <a href="mailto:infranovagc@gmail.com?subject=Civil%20Engineering%20Tender%20Inquiry" class="btn btn-ghost">Email Tender RFP</a>
+    </div>
+  </div>
+
+</section>
+
 <!-- FOOTER -->
 <footer id="contact">
   <div class="footer-grid">
     <div>
-      <div class="logo" style="margin-bottom:16px;">INFRA<span>NOVA</span> GLOBAL</div>
-      <p style="font-size:13.5px; color:#a9b6bd; line-height:1.7; max-width:280px;">Premium real estate development, property investment, and smart-city communities across Nigeria.</p>
+      <div class="logo" style="display: flex; align-items: center; gap: 14px; margin-bottom: 16px;">
+        <img src="images/logo.png" alt="Infranova Logo" style="height: 48px; width: auto; object-fit: contain;">
+        <div>
+          <span class="full" style="font-family:'Fraunces',serif; font-size:22px; font-weight:700; color:#fff; letter-spacing:.5px; line-height:1.15; display: block;">INFRANOVA <span style="color:var(--gold-soft);">GLOBAL CONCEPT</span></span>
+          <span class="sub" style="display:block; font-size:10.5px; letter-spacing:2px; color:var(--gold-soft); font-family:'Inter',sans-serif; font-weight:600; margin-top:3px;">LTD · PARENT HOLDING</span>
+        </div>
+      </div>
+      <p style="font-size:13.5px; color:#a9b6bd; line-height:1.7; max-width:280px;">Premium real estate development, property investment, municipal road construction, and stormwater drainage systems across Nigeria.</p>
     </div>
     <div>
       <h5>Company</h5>
       <ul>
         <li><a href="index.html#overview">About Us</a></li>
-        <li><a href="#">Careers</a></li>
-        <li><a href="#">News &amp; Blog</a></li>
-        <li><a href="#">Media Center</a></li>
+        <li><a href="#road-construction">Road Construction</a></li>
+        <li><a href="#drainage-systems">Drainage Engineering</a></li>
+        <li><a href="soya.html">Pure Soya Oil</a></li>
       </ul>
     </div>
     <div>
       <h5>Explore</h5>
       <ul>
-        <li><a href="properties.html">Properties</a></li>
-        <li><a href="index.html#projects">Projects</a></li>
-        <li><a href="index.html#invest">Investment</a></li>
-        <li><a href="index.html#services">Services</a></li>
+        <li><a href="#properties-container">Properties Catalog</a></li>
+        <li><a href="#civil-infrastructure">Civil Infrastructure</a></li>
+        <li><a href="index.html#companies">Operating Divisions</a></li>
+        <li><a href="distributor.html">Become a Distributor</a></li>
       </ul>
     </div>
     <div>

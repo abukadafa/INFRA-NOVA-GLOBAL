@@ -27,10 +27,11 @@
 
   #progress{ position:fixed; top:0; left:0; height:3px; width:0%; background:linear-gradient(90deg, var(--gold), var(--brown)); z-index:999; transition:width .1s linear; }
 
-  nav{ position:fixed; top:0; left:0; right:0; z-index:900; display:flex; align-items:center; justify-content:space-between; padding:18px 48px; transition:background .35s ease, padding .35s ease; background:rgba(28,15,7,0.96); backdrop-filter:blur(10px); }
-  .logo{ display:flex; align-items:center; gap:12px; font-family:'Fraunces',serif; font-size:16px; font-weight:600; color:#fff; letter-spacing:.3px; line-height:1.2;}
+  nav{ position:fixed; top:0; left:0; right:0; z-index:900; display:flex; align-items:center; justify-content:space-between; padding:16px 48px; transition:background .35s ease, padding .35s ease; background:rgba(28,15,7,0.96); backdrop-filter:blur(10px); }
+  .logo{ display:flex; align-items:center; gap:14px; font-family:'Fraunces',serif; font-size:24px; font-weight:700; color:#fff; letter-spacing:.5px; line-height:1.15;}
   .logo span{ color:var(--gold-soft); }
-  .logo .full{display:block;} .logo .sub{display:block; font-size:9.5px; letter-spacing:1.4px; color:var(--gold-soft); font-family:'Inter',sans-serif; font-weight:500; margin-top:2px;}
+  .logo .full{display:block; font-size:24px; font-weight:700; letter-spacing:0.5px;} 
+  .logo .sub{display:block; font-size:10.5px; letter-spacing:2.2px; color:var(--gold-soft); font-family:'Inter',sans-serif; font-weight:600; margin-top:3px; text-transform:uppercase;}
   .navlinks{ display:flex; gap:28px; align-items:center; }
   .navlinks a{ color:#eee3d3; font-size:14px; font-weight:500; letter-spacing:.2px; }
   .navlinks a:hover{ color:var(--gold-soft); }
@@ -49,12 +50,18 @@
   .btn-olive:hover{ background:#4a5730; transform:translateY(-1px); }
   .btn-ghost{ border-color:rgba(255,255,255,.4); color:#fff;}
   .btn-ghost:hover{ border-color:var(--gold); color:var(--gold-soft);}
-  @media(max-width:960px){ .navlinks{display:none;} nav{padding:14px 20px;} }
+  @media(max-width:960px){ 
+    .navlinks{display:none;} 
+    nav{padding:14px 20px;} 
+    .logo .full{ font-size:20px; }
+    .logo img{ height:40px !important; }
+  }
   @media(max-width:480px){
-    .logo{ font-size:13.5px; gap:9px; }
-    .logo img{ height:30px !important; }
-    .logo .sub{ display:none; }
-    .navcta .btn{ padding:9px 16px; font-size:12.5px; }
+    .logo{ font-size:16px; gap:10px; }
+    .logo img{ height:34px !important; }
+    .logo .full{ font-size:16px; }
+    .logo .sub{ font-size:8.5px; letter-spacing:1.2px; }
+    .navcta .btn{ padding:8px 14px; font-size:12px; }
   }
 
   /* HERO SECTION — real site photography, copy anchored left */
@@ -170,6 +177,36 @@
   .cta-block h3{ font-size:clamp(22px,2.8vw,32px); max-width:480px; line-height:1.25; position:relative; z-index:2;}
   .cta-block .row{ display:flex; gap:14px; position:relative; z-index:2; flex-wrap:wrap;}
 
+  /* INFRASTRUCTURE SHOWCASE (ROADS & DRAINAGE) */
+  .infra-section{ background:#fff; border-top:1px solid rgba(169,137,93,0.25); border-bottom:1px solid rgba(169,137,93,0.25); width:100%; padding:90px 48px; }
+  .infra-inner{ max-width:1280px; margin:0 auto; }
+  .infra-category{ margin-bottom:52px; }
+  .infra-subhead{ display:flex; align-items:flex-end; justify-content:space-between; margin-bottom:24px; flex-wrap:wrap; gap:14px; }
+  .infra-subhead h3{ font-size:24px; color:var(--brown-deep); display:flex; align-items:center; gap:10px; font-weight:600; }
+  .infra-subhead p{ color:#6c6052; font-size:14.5px; max-width:680px; line-height:1.6; }
+  .infra-grid-3{ display:grid; grid-template-columns:repeat(3, 1fr); gap:24px; }
+  .infra-grid-4{ display:grid; grid-template-columns:repeat(4, 1fr); gap:20px; }
+  @media(max-width:1024px){
+    .infra-grid-3{ grid-template-columns:1fr 1fr; }
+    .infra-grid-4{ grid-template-columns:1fr 1fr; }
+  }
+  @media(max-width:640px){
+    .infra-grid-3{ grid-template-columns:1fr; }
+    .infra-grid-4{ grid-template-columns:1fr; }
+    .infra-section{ padding:60px 20px; }
+  }
+  .infra-card{ background:#FBF8F3; border-radius:8px; border:1px solid rgba(169,137,93,0.22); overflow:hidden; box-shadow:0 8px 24px rgba(46,26,13,0.06); transition:transform .3s ease, box-shadow .3s ease; display:flex; flex-direction:column; }
+  .infra-card:hover{ transform:translateY(-5px); box-shadow:0 16px 36px rgba(46,26,13,0.12); }
+  .infra-media{ position:relative; height:210px; overflow:hidden; }
+  .infra-media img{ width:100%; height:100%; object-fit:cover; transition:transform .5s ease; }
+  .infra-card:hover .infra-media img{ transform:scale(1.06); }
+  .infra-pill{ position:absolute; top:12px; left:12px; background:rgba(36,18,7,0.88); color:var(--gold-soft); font-size:10.5px; font-weight:700; letter-spacing:.8px; padding:4px 10px; border-radius:3px; text-transform:uppercase; backdrop-filter:blur(4px); }
+  .infra-content{ padding:20px 22px; flex:1; display:flex; flex-direction:column; justify-content:space-between; }
+  .infra-content h4{ font-family:'Fraunces', serif; font-size:18px; color:var(--brown-deep); margin-bottom:8px; font-weight:600; }
+  .infra-content p{ font-size:13px; color:#5b5347; line-height:1.6; margin-bottom:14px; }
+  .infra-specs{ display:flex; gap:8px; flex-wrap:wrap; }
+  .infra-chip{ background:rgba(176,141,91,0.16); color:var(--brown); font-size:11px; font-weight:600; padding:3px 8px; border-radius:3px; }
+
   /* FOOTER */
   footer{ background:var(--brown-deep); color:#cbbca6; padding:76px 48px 30px;}
   .footer-grid{ max-width:1280px; margin:0 auto; display:grid; grid-template-columns:1.5fr 1fr 1fr 1fr; gap:40px; padding-bottom:44px; border-bottom:1px solid rgba(255,255,255,.12);}
@@ -188,10 +225,10 @@
 <!-- NAVIGATION -->
 <nav id="nav">
   <a href="index.html" class="logo">
-    <img src="images/logo.png" alt="Infranova Logo" style="height: 38px; width: auto; object-fit: contain;">
+    <img src="images/logo.png" alt="Infranova Logo" style="height: 48px; width: auto; object-fit: contain;">
     <div>
       <span class="full">INFRANOVA <span>GLOBAL CONCEPT</span></span>
-      <span class="sub">Parent holding company</span>
+      <span class="sub">LTD · PARENT HOLDING</span>
     </div>
   </a>
 
@@ -218,12 +255,12 @@
     <div class="hero-copy">
       <span class="eyebrow">Parent holding company, RC 8576496</span>
       <h1>Building estates. Refining oil. One Nigerian group.</h1>
-      <p class="sub">Infranova Global Concept Ltd is the holding company behind Infranova Properties, developing the estate under construction here in Katsina, and Infranova Pure Soya Oil, refining packaged soybean oil for homes and businesses across Nigeria.</p>
+      <p class="sub">Infranova Global Concept Ltd is the parent holding entity governing Infranova Properties — delivering luxury residential estates, arterial road construction, and engineered stormwater drainage networks across Nigeria — and Infranova Pure Soya Oil, refining packaged soybean oil for homes and businesses nationwide.</p>
     </div>
 
     <!-- DIRECT COMPANY ENTRANCE CARDS -->
     <div class="entrance-container">
-      <div class="entrance-title">Go straight to one of our companies</div>
+      <div class="entrance-title">Go straight to one of our operating companies</div>
 
       <div class="entrance-grid">
         <!-- Pure Soya Oil Card -->
@@ -238,10 +275,10 @@
         <!-- Infranova Properties Card -->
         <div class="entrance-card" onclick="window.location.href='properties.html'">
           <div>
-            <h4>Infranova Properties</h4>
-            <p>Residential estates, commercial towers and civil construction projects across Nigeria.</p>
+            <h4>Infranova Properties &amp; Civil Works</h4>
+            <p>Residential estates, municipal road construction, earthworks &amp; reinforced stormwater drainage systems.</p>
           </div>
-          <div class="entrance-link-text">Browse the catalog <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 3L11 8L6 13" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="entrance-link-text">Explore properties &amp; civil projects <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 3L11 8L6 13" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
         </div>
       </div>
     </div>
@@ -287,30 +324,189 @@
         </div>
       </div>
 
-      <!-- COMPANY 2: INFRANOVA PROPERTIES -->
+      <!-- COMPANY 2: INFRANOVA PROPERTIES & INFRASTRUCTURE -->
       <div class="company-box">
         <div class="company-header">
-          <span class="tag">Engineering &amp; Real Estate Division</span>
-          <h3>2. Infranova Properties</h3>
+          <span class="tag">Engineering, Real Estate &amp; Civil Works</span>
+          <h3>2. Infranova Properties &amp; Civil Infrastructure</h3>
         </div>
         <div class="company-body">
           <div class="spec-block">
             <h4>Our Mission</h4>
-            <p>To engineer, construct, and deliver high-yield luxury residential estates, commercial office landmarks, and serviced smart-city developments built to international structural standards.</p>
+            <p>To engineer, construct, and deliver high-yield luxury residential estates, municipal road networks, and flood-resilient stormwater drainage systems built to the highest structural and civil engineering standards.</p>
           </div>
 
           <div class="spec-block">
             <h4>Our Vision</h4>
-            <p>To transform Africa’s urban architectural landscape through sustainable engineering, innovative building practices, and premier property investments.</p>
+            <p>To transform Africa’s urban and infrastructural landscape through sustainable engineering, cutting-edge road and drainage construction, and premier property developments.</p>
           </div>
 
           <div class="spec-block">
-            <h4>Client Reach</h4>
-            <p>Serving homeowners, real estate investors, corporate organizations, financial institutions, SMEs, and government agencies across Abuja, Lagos, and major hubs nationwide.</p>
+            <h4>Civil Works &amp; Real Estate Scope</h4>
+            <p>High-grade asphalt road construction, heavy earthmoving, reinforced concrete box culverts and storm drains, alongside gated residential communities and commercial landmarks across Nigeria.</p>
           </div>
 
           <div class="company-actions">
             <a href="properties.html" class="btn btn-gold">Browse Properties Catalog</a>
+            <a href="#infrastructure" class="btn btn-ghost" style="border-color:var(--gold); color:var(--brown-deep);">View Road &amp; Drainage Works ↓</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CIVIL INFRASTRUCTURE SHOWCASE (ROAD CONSTRUCTION & DRAINAGE) -->
+  <section id="infrastructure" class="infra-section">
+    <div class="infra-inner">
+      <div class="section-head" style="margin-bottom:48px;">
+        <span class="section-tag">CIVIL ENGINEERING EXCELLENCE</span>
+        <h2>Road Construction &amp; Municipal Drainage Engineering</h2>
+        <p>Beyond residential estates, Infranova Properties deploys specialized heavy machinery, precision asphalt paving, and structural reinforced drainage engineering to build enduring community infrastructure across Nigeria.</p>
+      </div>
+
+      <!-- DIVISION 1: ROAD CONSTRUCTION -->
+      <div class="infra-category">
+        <div class="infra-subhead">
+          <div>
+            <h3>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19L8 5"/><path d="M16 5l4 14"/><path d="M12 7v2"/><path d="M12 13v2"/><path d="M12 19v2"/></svg>
+              Road Construction &amp; Arterial Paving Division
+            </h3>
+            <p>Full-scope highway and estate corridor construction: heavy earthworks, sub-base compaction, bituminous surfacing, and finished kerb alignments.</p>
+          </div>
+          <a href="properties.html#road-construction" class="btn btn-ghost" style="border-color:var(--brown); color:var(--brown); font-size:12.5px; padding:8px 16px;">Detailed Road Specs →</a>
+        </div>
+
+        <div class="infra-grid-3">
+          <!-- Road Photo 1 -->
+          <div class="infra-card">
+            <div class="infra-media">
+              <img src="images/road-construction-1.jpg" alt="Infranova Heavy Earthworks and Sub-Base Compaction">
+              <span class="infra-pill">Earthworks &amp; Sub-Base</span>
+            </div>
+            <div class="infra-content">
+              <h4>Heavy Earthworks &amp; Compaction</h4>
+              <p>Topsoil stripping, subgrade stabilization, and heavy vibratory compaction ensuring enduring load capacity for heavy transport traffic.</p>
+              <div class="infra-specs">
+                <span class="infra-chip">Vibratory Rollers</span>
+                <span class="infra-chip">Soil Stabilization</span>
+                <span class="infra-chip">Sub-Base Testing</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Road Photo 2 -->
+          <div class="infra-card">
+            <div class="infra-media">
+              <img src="images/road-construction-2.jpg" alt="Infranova Asphalt Laying and Bituminous Paving">
+              <span class="infra-pill">Hot-Mix Asphalt</span>
+            </div>
+            <div class="infra-content">
+              <h4>Precision Asphalt Laying</h4>
+              <p>Bituminous prime coating, hot-mix asphalt concrete paving, and seamless pneumatic rolling for smooth, high-friction road surfaces.</p>
+              <div class="infra-specs">
+                <span class="infra-chip">Asphalt Finishers</span>
+                <span class="infra-chip">Pneumatic Rollers</span>
+                <span class="infra-chip">All-Weather Durability</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Road Photo 3 -->
+          <div class="infra-card">
+            <div class="infra-media">
+              <img src="images/road-construction-3.jpg" alt="Infranova Finished Arterial Road and Kerbs">
+              <span class="infra-pill">Finished Alignment</span>
+            </div>
+            <div class="infra-content">
+              <h4>Arterial Corridor Alignment</h4>
+              <p>Dual-lane road profiling, integrated concrete road kerbs, drainage integration, and traffic safety engineering.</p>
+              <div class="infra-specs">
+                <span class="infra-chip">Cast-in-situ Kerbs</span>
+                <span class="infra-chip">Dual Carriageway</span>
+                <span class="infra-chip">Municipal Standards</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- DIVISION 2: DRAINAGE CONSTRUCTION -->
+      <div class="infra-category" style="margin-bottom:20px;">
+        <div class="infra-subhead">
+          <div>
+            <h3>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--olive)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>
+              Reinforced Drainage &amp; Flood Defense Engineering
+            </h3>
+            <p>Heavy reinforced concrete box drains, storm collector channels, and erosion mitigation structures designed to withstand peak seasonal rainfall.</p>
+          </div>
+          <a href="properties.html#drainage-systems" class="btn btn-ghost" style="border-color:var(--olive); color:var(--olive); font-size:12.5px; padding:8px 16px;">Detailed Drainage Specs →</a>
+        </div>
+
+        <div class="infra-grid-4">
+          <!-- Drainage Photo 1 -->
+          <div class="infra-card">
+            <div class="infra-media">
+              <img src="images/drainage-construction-1.jpg" alt="Reinforced Concrete Box Drain Casting">
+              <span class="infra-pill" style="background:rgba(46,60,25,0.9);">Reinforced Drain</span>
+            </div>
+            <div class="infra-content">
+              <h4>Reinforced Box Drains</h4>
+              <p>High-tensile steel rebar reinforcement with monolithic concrete casting for heavy urban stormwater discharge.</p>
+              <div class="infra-specs">
+                <span class="infra-chip">Steel Rebar Cage</span>
+                <span class="infra-chip">Cast-in-Situ</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Drainage Photo 2 -->
+          <div class="infra-card">
+            <div class="infra-media">
+              <img src="images/drainage-construction-2.jpg" alt="Deep Stormwater Collector Trench Excavation">
+              <span class="infra-pill" style="background:rgba(46,60,25,0.9);">Trench Excavation</span>
+            </div>
+            <div class="infra-content">
+              <h4>Deep Storm Collector Trenches</h4>
+              <p>Precision hydraulic gradient trenching and shoring preventing waterlogging and protecting surrounding structures.</p>
+              <div class="infra-specs">
+                <span class="infra-chip">Hydraulic Gradient</span>
+                <span class="infra-chip">Flood Prevention</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Drainage Photo 3 -->
+          <div class="infra-card">
+            <div class="infra-media">
+              <img src="images/drainage-construction-3.jpg" alt="Channel Invert and Structural Formwork">
+              <span class="infra-pill" style="background:rgba(46,60,25,0.9);">Channel Formwork</span>
+            </div>
+            <div class="infra-content">
+              <h4>Channel Formwork &amp; Inverts</h4>
+              <p>Engineered smooth flow base channels preventing sediment accumulation and facilitating rapid stormwater velocity.</p>
+              <div class="infra-specs">
+                <span class="infra-chip">Flow Velocity Control</span>
+                <span class="infra-chip">Anti-Scour Base</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Drainage Photo 4 -->
+          <div class="infra-card">
+            <div class="infra-media">
+              <img src="images/drainage-construction-4.jpg" alt="Finished Drainage System with Heavy Cover Slabs">
+              <span class="infra-pill" style="background:rgba(46,60,25,0.9);">Finished Drainage</span>
+            </div>
+            <div class="infra-content">
+              <h4>Completed Drainage Network</h4>
+              <p>Heavy-duty reinforced cover slabs and pedestrian-safe drainage integration alongside road shoulders and estate boundaries.</p>
+              <div class="infra-specs">
+                <span class="infra-chip">Heavy Cover Slabs</span>
+                <span class="infra-chip">Complete Culverts</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -333,11 +529,11 @@
 <footer>
   <div class="footer-grid">
     <div>
-      <div class="logo" style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
-        <img src="images/logo.png" alt="Infranova Logo" style="height: 38px; width: auto; object-fit: contain;">
+      <div class="logo" style="display: flex; align-items: center; gap: 14px; margin-bottom: 16px;">
+        <img src="images/logo.png" alt="Infranova Logo" style="height: 48px; width: auto; object-fit: contain;">
         <div>
-          <span class="full" style="font-family:'Fraunces',serif; font-size:16px; font-weight:600; color:#fff; letter-spacing:.3px; line-height:1.2; display: block;">INFRANOVA <span style="color:var(--gold-soft);">GLOBAL CONCEPT</span></span>
-          <span class="sub" style="display:block; font-size:9px; letter-spacing:1.8px; color:var(--gold-soft); font-family:'Inter',sans-serif; font-weight:500; margin-top:2px;">LTD · PARENT HOLDING</span>
+          <span class="full" style="font-family:'Fraunces',serif; font-size:22px; font-weight:700; color:#fff; letter-spacing:.5px; line-height:1.15; display: block;">INFRANOVA <span style="color:var(--gold-soft);">GLOBAL CONCEPT</span></span>
+          <span class="sub" style="display:block; font-size:10.5px; letter-spacing:2px; color:var(--gold-soft); font-family:'Inter',sans-serif; font-weight:600; margin-top:3px;">LTD · PARENT HOLDING</span>
         </div>
       </div>
       <p style="font-size:13.5px; color:#cbbca6; line-height:1.7; max-width:280px;">A premier Nigerian parent entity governing Infranova Pure Soya Oil and Infranova Properties.</p>
@@ -349,6 +545,7 @@
         <li><a href="soya.html">Infranova Pure Soya Oil</a></li>
         <li><a href="distributor.html">Distributor Application</a></li>
         <li><a href="properties.html">Infranova Properties</a></li>
+        <li><a href="properties.html#civil-infrastructure">Road &amp; Drainage Works</a></li>
       </ul>
     </div>
 
