@@ -10,21 +10,28 @@
 <style>
   /* Header banner */
   .page-header {
-    background: linear-gradient(180deg, var(--navy-deep) 0%, var(--navy) 100%);
+    background: linear-gradient(180deg, #180D05 0%, #30190B 100%);
     padding: 160px 48px 80px;
     text-align: center;
     color: #fff;
+    border-bottom: 2px solid #FFDF73;
   }
   .page-header h1 {
-    font-size: clamp(32px, 5vw, 56px);
-    font-weight: 600;
-    margin-bottom: 12px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: clamp(34px, 5vw, 58px);
+    font-weight: 700;
+    margin-bottom: 14px;
+    color: #FFFFFF;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.6);
   }
   .page-header p {
-    color: #c7d0d6;
-    font-size: 16px;
-    max-width: 600px;
+    color: #FFFFFF;
+    font-size: 17.5px;
+    font-weight: 500;
+    max-width: 720px;
     margin: 0 auto;
+    line-height: 1.7;
+    text-shadow: 0 1px 4px rgba(0,0,0,0.5);
   }
 
   /* Filters container */
@@ -189,26 +196,28 @@
     flex-grow: 1;
   }
   .prop-body .loc {
-    font-size: 11px;
+    font-size: 11.5px;
     letter-spacing: 1.5px;
     text-transform: uppercase;
-    color: var(--gray-dark);
+    color: #5C4A3A;
+    font-weight: 700;
     margin-bottom: 8px;
     display: flex;
     align-items: center;
     gap: 4px;
   }
   .prop-body h4 {
-    font-family: 'Fraunces', serif;
-    font-size: 20px;
-    margin-bottom: 12px;
-    color: var(--navy-deep);
-    font-weight: 600;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 21px;
+    margin-bottom: 10px;
+    color: #1A0E05;
+    font-weight: 700;
   }
   .prop-desc-snippet {
-    font-size: 13.5px;
-    color: var(--text-muted);
-    line-height: 1.5;
+    font-size: 14px;
+    color: #2E2015;
+    font-weight: 500;
+    line-height: 1.6;
     margin-bottom: 18px;
     display: -webkit-box;
     -webkit-line-clamp: 2;
@@ -218,11 +227,12 @@
   .prop-meta {
     display: flex;
     gap: 16px;
-    font-size: 12.5px;
-    color: var(--text-muted);
+    font-size: 13px;
+    font-weight: 600;
+    color: #2E2015;
     margin-bottom: 20px;
-    border-top: 1px dashed #eee;
-    border-bottom: 1px dashed #eee;
+    border-top: 1px solid #EAE0D3;
+    border-bottom: 1px solid #EAE0D3;
     padding: 10px 0;
   }
   .prop-meta span {
@@ -237,22 +247,22 @@
     margin-top: auto;
   }
   .prop-price .amt {
-    font-family: 'Fraunces', serif;
-    font-weight: 600;
-    color: var(--navy-deep);
-    font-size: 17px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 700;
+    color: #1A0E05;
+    font-size: 19px;
   }
   .prop-price a {
-    font-size: 13px;
-    font-weight: 600;
-    color: var(--emerald);
+    font-size: 13.5px;
+    font-weight: 700;
+    color: #205917;
     transition: color 0.2s ease, transform 0.2s ease;
     display: flex;
     align-items: center;
     gap: 4px;
   }
   .prop-price a:hover {
-    color: var(--gold);
+    color: #D4AF37;
     transform: translateX(3px);
   }
 
@@ -494,74 +504,97 @@
     padding: 0 32px;
   }
   .civil-banner {
-    background: linear-gradient(135deg, var(--brown-deep) 0%, #3e2210 60%, var(--olive) 100%);
+    background: linear-gradient(135deg, #180D05 0%, #2E1A0D 45%, #182810 100%);
+    border: 2px solid #FFDF73;
     border-radius: 12px;
-    padding: 48px 44px;
-    color: #fff;
+    padding: 54px 48px;
+    color: #ffffff;
     margin-bottom: 50px;
     position: relative;
     overflow: hidden;
-    box-shadow: 0 16px 40px rgba(46,26,13,0.12);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.35);
   }
   .civil-banner-badge {
     display: inline-block;
-    background: rgba(228,207,164,0.2);
-    color: var(--gold-soft);
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 2px;
-    padding: 6px 14px;
+    background: #FFDF73;
+    color: #140A03;
+    font-size: 12.5px;
+    font-weight: 800;
+    letter-spacing: 2.2px;
+    padding: 8px 18px;
     border-radius: 4px;
     text-transform: uppercase;
-    margin-bottom: 16px;
-    border: 1px solid rgba(228,207,164,0.3);
+    margin-bottom: 18px;
+    border: 1px solid #FFF1A8;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.3);
   }
   .civil-banner h2 {
-    font-size: clamp(26px, 3.5vw, 38px);
-    font-weight: 600;
-    line-height: 1.25;
-    margin-bottom: 14px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: clamp(30px, 4vw, 44px);
+    font-weight: 700;
+    line-height: 1.22;
+    margin-bottom: 16px;
+    color: #FFFFFF;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.85);
+    letter-spacing: 0.3px;
   }
   .civil-banner p {
-    font-size: 16px;
-    color: #eee3d3;
-    max-width: 780px;
-    line-height: 1.7;
-    margin-bottom: 26px;
+    font-size: 18px;
+    color: #FFFFFF;
+    font-weight: 500;
+    max-width: 820px;
+    line-height: 1.8;
+    margin-bottom: 32px;
+    text-shadow: 0 1px 4px rgba(0,0,0,0.6);
   }
   .civil-stats-row {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
-    padding-top: 24px;
-    border-top: 1px solid rgba(255,255,255,0.15);
+    padding-top: 32px;
+    border-top: 2px solid rgba(255,223,115,0.35);
   }
   @media(max-width: 800px) {
-    .civil-stats-row { grid-template-columns: repeat(2, 1fr); }
+    .civil-stats-row { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  }
+  .civil-stat-item {
+    background: rgba(0, 0, 0, 0.45);
+    border: 1px solid rgba(255, 223, 115, 0.3);
+    border-radius: 8px;
+    padding: 18px 20px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(8px);
   }
   .civil-stat-item h4 {
-    font-size: 26px;
-    font-family: 'Fraunces', serif;
-    color: var(--gold-soft);
-    font-weight: 700;
+    font-size: 34px;
+    font-family: 'Times New Roman', Times, serif;
+    color: #FFDF73;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 8px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+    letter-spacing: 0.5px;
   }
   .civil-stat-item span {
-    font-size: 12.5px;
-    color: #d6cbba;
+    font-size: 13.5px;
+    color: #FFFFFF;
+    font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
+    letter-spacing: 1px;
+    display: block;
+    line-height: 1.45;
   }
 
   .civil-division-card {
-    background: #fff;
+    background: #ffffff;
     border-radius: 12px;
-    border: 1px solid rgba(169,137,93,0.25);
-    box-shadow: 0 10px 30px rgba(46,26,13,0.06);
+    border: 2px solid #E5D5C0;
+    box-shadow: 0 14px 40px rgba(46,26,13,0.08);
     margin-bottom: 50px;
-    padding: 40px;
+    padding: 44px;
   }
   @media(max-width: 600px) {
-    .civil-division-card { padding: 24px 20px; }
+    .civil-division-card { padding: 26px 20px; }
   }
   .civil-div-header {
     display: flex;
@@ -570,20 +603,22 @@
     margin-bottom: 30px;
     flex-wrap: wrap;
     gap: 16px;
-    border-bottom: 2px solid #f2ece3;
-    padding-bottom: 20px;
+    border-bottom: 2px solid #EFE6D8;
+    padding-bottom: 24px;
   }
   .civil-div-header h3 {
-    font-size: 26px;
-    color: var(--brown-deep);
-    font-weight: 600;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+    color: #1E120A;
+    font-weight: 700;
   }
   .civil-div-header p {
-    font-size: 14.5px;
-    color: #6b5e50;
-    max-width: 680px;
-    margin-top: 6px;
-    line-height: 1.6;
+    font-size: 16px;
+    color: #2E2015;
+    font-weight: 500;
+    max-width: 720px;
+    margin-top: 8px;
+    line-height: 1.65;
   }
 
   .civil-photos-grid-3 {
@@ -610,14 +645,15 @@
   .civil-photo-card {
     border-radius: 8px;
     overflow: hidden;
-    background: #FBF8F3;
-    border: 1px solid rgba(169,137,93,0.2);
-    box-shadow: 0 6px 18px rgba(46,26,13,0.05);
+    background: #FFFFFF;
+    border: 1px solid #D6C4AD;
+    box-shadow: 0 8px 24px rgba(46,26,13,0.08);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
   .civil-photo-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 14px 30px rgba(46,26,13,0.12);
+    box-shadow: 0 16px 36px rgba(46,26,13,0.15);
+    border-color: #A9895D;
   }
   .civil-photo-wrap {
     height: 220px;
@@ -637,35 +673,39 @@
     position: absolute;
     top: 12px;
     left: 12px;
-    background: rgba(36,18,7,0.85);
-    color: var(--gold-soft);
-    font-size: 10.5px;
-    font-weight: 700;
-    letter-spacing: 0.8px;
-    padding: 4px 10px;
-    border-radius: 3px;
+    background: rgba(18, 10, 4, 0.92);
+    color: #FFDF73;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    padding: 5px 12px;
+    border-radius: 4px;
     text-transform: uppercase;
+    border: 1px solid rgba(255, 223, 115, 0.35);
     backdrop-filter: blur(4px);
   }
   .civil-photo-info {
-    padding: 18px 20px;
+    padding: 20px 22px;
   }
   .civil-photo-info h4 {
-    font-family: 'Fraunces', serif;
-    font-size: 17px;
-    color: var(--brown-deep);
-    margin-bottom: 6px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 19px;
+    color: #180D05;
+    font-weight: 700;
+    margin-bottom: 8px;
   }
   .civil-photo-info p {
-    font-size: 13px;
-    color: #5b5347;
-    line-height: 1.55;
+    font-size: 14px;
+    color: #2E2218;
+    font-weight: 500;
+    line-height: 1.6;
   }
 
   .civil-feature-box {
-    background: #f7f3ec;
+    background: #F8F4EE;
+    border: 1px solid #D8C7B2;
     border-radius: 8px;
-    padding: 24px 28px;
+    padding: 24px 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -674,43 +714,106 @@
   }
   .civil-feature-list {
     display: flex;
-    gap: 20px;
+    gap: 24px;
     flex-wrap: wrap;
     list-style: none;
   }
   .civil-feature-list li {
-    font-size: 13.5px;
-    font-weight: 600;
-    color: var(--brown-deep);
+    font-size: 14.5px;
+    font-weight: 700;
+    color: #1E120A;
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 10px;
   }
   .civil-feature-list li svg {
-    color: var(--olive);
+    color: #2E5C1E;
+    stroke: #2E5C1E;
+    stroke-width: 2.8;
     flex-shrink: 0;
   }
 
   .civil-cta-card {
-    background: linear-gradient(120deg, var(--brown-deep) 0%, #4a2a14 50%, var(--gold) 100%);
+    background: linear-gradient(135deg, #180D05 0%, #301B0E 50%, #15220E 100%);
+    border: 2px solid #FFDF73;
     border-radius: 12px;
-    padding: 50px 44px;
-    color: #fff;
+    padding: 54px 48px;
+    color: #ffffff;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    gap: 24px;
+    gap: 28px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+  }
+  .civil-cta-tag {
+    display: inline-block;
+    background: #FFDF73;
+    color: #140A03;
+    font-size: 12.5px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    padding: 7px 16px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    border: 1px solid #FFEAA0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
   }
   .civil-cta-card h3 {
-    font-size: 28px;
-    font-weight: 600;
-    margin-bottom: 8px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: clamp(28px, 3.5vw, 40px);
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: #FFFFFF;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.8);
+    letter-spacing: 0.3px;
   }
   .civil-cta-card p {
+    font-size: 17.5px;
+    color: #FFFFFF;
+    font-weight: 500;
+    max-width: 660px;
+    line-height: 1.75;
+    text-shadow: 0 1px 4px rgba(0,0,0,0.5);
+  }
+  .btn-whatsapp-cta {
+    background: #25D366;
+    color: #FFFFFF !important;
     font-size: 15px;
-    color: #eee3d3;
-    max-width: 600px;
+    font-weight: 700;
+    padding: 14px 26px;
+    border-radius: 6px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid #34e777;
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+    transition: all 0.25s ease;
+    text-decoration: none;
+  }
+  .btn-whatsapp-cta:hover {
+    background: #20BA5A;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(37, 211, 102, 0.5);
+  }
+  .btn-ghost-cta {
+    background: rgba(255,255,255,0.08);
+    color: #FFFFFF !important;
+    font-size: 15px;
+    font-weight: 700;
+    padding: 13px 26px;
+    border-radius: 6px;
+    border: 2px solid #FFFFFF;
+    transition: all 0.25s ease;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+  }
+  .btn-ghost-cta:hover {
+    background: #FFFFFF;
+    color: #140A03 !important;
+    transform: translateY(-2px);
   }
 </style>
 </head>
@@ -1026,13 +1129,16 @@
   <!-- CALL TO ACTION / TENDER QUOTE -->
   <div id="quote-cta" class="civil-cta-card">
     <div>
-      <span style="font-size:12px; font-weight:700; color:var(--gold-soft); text-transform:uppercase; letter-spacing:1.5px; display:block; margin-bottom:8px;">Consultation &amp; Procurement Desk</span>
+      <span class="civil-cta-tag">Consultation &amp; Procurement Desk</span>
       <h3>Commission Road &amp; Drainage Infrastructure</h3>
       <p>Partner with Infranova Properties for municipal road tenders, private residential estate infrastructure, stormwater mitigation, or civil earthmoving across Nigeria.</p>
     </div>
-    <div style="display:flex; gap:12px; flex-wrap:wrap;">
-      <a href="https://wa.me/2348181412668?text=Hello%20Infranova%20Engineering%2C%20I%20would%20like%20to%20request%20an%20infrastructure%20consultation%20%2F%20quote%20for%20Road%20and%20Drainage%20works." target="_blank" class="btn btn-gold">WhatsApp Engineering Desk</a>
-      <a href="mailto:infranovagc@gmail.com?subject=Civil%20Engineering%20Tender%20Inquiry" class="btn btn-ghost">Email Tender RFP</a>
+    <div style="display:flex; gap:14px; flex-wrap:wrap; align-items:center;">
+      <a href="https://wa.me/2348181412668?text=Hello%20Infranova%20Engineering%2C%20I%20would%20like%20to%20request%20an%20infrastructure%20consultation%20%2F%20quote%20for%20Road%20and%20Drainage%20works." target="_blank" class="btn-whatsapp-cta">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="#fff"><path d="M12.04 2c-5.52 0-10 4.48-10 10 0 1.77.46 3.45 1.27 4.9L2 22l5.25-1.38A9.95 9.95 0 0012.04 22c5.52 0 10-4.48 10-10s-4.48-10-10-10zm0 18.1c-1.6 0-3.1-.44-4.4-1.2l-.32-.19-3.12.82.83-3.04-.2-.32a8.1 8.1 0 01-1.24-4.27c0-4.48 3.65-8.13 8.13-8.13s8.13 3.65 8.13 8.13-3.65 8.2-8.01 8.2z"/></svg>
+        WhatsApp Engineering Desk
+      </a>
+      <a href="mailto:infranovagc@gmail.com?subject=Civil%20Engineering%20Tender%20Inquiry" class="btn-ghost-cta">Email Tender RFP</a>
     </div>
   </div>
 

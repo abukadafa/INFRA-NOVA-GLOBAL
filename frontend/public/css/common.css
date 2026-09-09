@@ -1,18 +1,18 @@
 :root {
   --navy: #6B3410; /* Conglomerate Warm Brown */
-  --navy-deep: #2E1A0D; /* Conglomerate Deep Brown */
-  --gold: #A9895D; /* Conglomerate Gold */
-  --gold-soft: #D9C4A0; /* Conglomerate Soft Gold */
-  --emerald: #5B6B3A; /* Conglomerate Olive */
-  --olive: #5B6B3A; /* Pure Soya Oil Olive */
+  --navy-deep: #160B04; /* Obsidian Deep Brown */
+  --gold: #D4AF37; /* Crisp Vivid Gold */
+  --gold-soft: #FFDF73; /* Luminous High-Contrast Gold */
+  --emerald: #35661B; /* Crisp Forest Emerald */
+  --olive: #35661B; /* Pure Soya Oil Olive */
   --ivory: #FBF8F3; /* Conglomerate Cream */
-  --charcoal: #26201A;
-  --line: rgba(169, 137, 93, 0.3);
+  --charcoal: #180E06; /* Crisp Dark Body Text */
+  --line: rgba(169, 137, 93, 0.35);
   --white: #ffffff;
   --gray-light: #FBF8F3;
   --gray-mid: #eee3d4;
-  --gray-dark: #8a7d6a;
-  --text-muted: #5b5347;
+  --gray-dark: #524434;
+  --text-muted: #2E2015; /* Crisp Dark Readable Text */
 }
 
 * {
@@ -30,10 +30,13 @@ body {
   color: var(--charcoal);
   font-family: 'Inter', sans-serif;
   overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 h1, h2, h3, .display {
-  font-family: 'Fraunces', serif;
+  font-family: 'Times New Roman', Times, 'Fraunces', serif;
 }
 
 a {
@@ -161,22 +164,29 @@ nav.scrolled {
 
 .btn-gold {
   background: var(--gold);
-  color: var(--navy-deep);
+  color: #140A03;
+  font-weight: 700;
+  border: 1px solid #FFEAA0;
+  box-shadow: 0 4px 12px rgba(212, 175, 55, 0.25);
 }
 
 .btn-gold:hover {
   background: var(--gold-soft);
-  transform: translateY(-1px);
+  color: #140A03;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(255, 223, 115, 0.35);
 }
 
 .btn-ghost {
-  border-color: rgba(255, 255, 255, .4);
+  border-color: rgba(255, 255, 255, .7);
   color: #fff;
+  font-weight: 600;
 }
 
 .btn-ghost:hover {
-  border-color: var(--gold);
+  border-color: var(--gold-soft);
   color: var(--gold-soft);
+  background: rgba(255, 255, 255, 0.08);
 }
 
 /* Scroll reveal class */
