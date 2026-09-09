@@ -30,6 +30,6 @@ services:
     routes:
       - type: rewrite
         source: /api/*
-        destination: https://infranova-global.onrender.com/api/*
+        destination: https://infra-nova-global.onrender.com/api/*
 
 
